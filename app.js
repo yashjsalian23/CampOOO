@@ -57,6 +57,6 @@ app.use(function(req, res, next){
 app.use("/",indexRoute);
 app.use("/campgrounds", campgroundRoute);
 app.use("/campgrounds/:id/comment", commentRoute);
-app.listen(9999, function(){
-	console.log("server starts");
+app.listen(process.env.PORT || 9000, function(){
+	console.log("Server has started");
 });
