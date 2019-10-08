@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CampOOO!!</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="<sha384-></sha384->BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+<link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+		<style>
+			body{
+				background:https://unsplash.com/photos/Yizrl9N_eDA;
+			}
+			
+			.container{
+				
+				margin-top:35px;
+			}
+			.thumbnail>img{
+				width:100%;
+			}
+			#delete-form{
+				display:inline;
+			}
+			.navbar-brand{
+				font-family: 'Mansalva', cursive;
+			}
+			.campooo{
+				font-family: 'Mansalva', cursive;
+			}
+			/* Google Maps */
+			#map {
+				height: 400px;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+	<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-this" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+      	</button>
+
+      	<div class="navbar-header">
+			<a href="/" class="navbar-brand">CampOOO!!</a>
+		</div>
+		 <div class="collapse navbar-collapse" id="collapse-this">
+
+		<div class="nav navbar-nav">
+			<li><a href="/"> About</a></li>
+			<li><a href="/">Contact</a></li>
+			
+		</div>
+		<div class="nav navbar-nav navbar-right">
+			<% if(!currentUser){ %>
+				<li><a href="/register">SignUp </a></li>
+				<li><a href="/login">Login </a></li>
+			<% }else{ %>
+				<li><a href="#">Welcome, <%=currentUser.username %></a></li>
+				<li><a href="/logoutUser">Logout </a></li>
+			<% } %>
+		</div>
+		</div>
+	</div>
+</nav>
+ <div class="container">
+        
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+<!-- <div class="container"> -->
+		
