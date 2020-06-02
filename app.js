@@ -10,10 +10,10 @@ var express     		  =require("express"),
 	localStrategy         =require("passport-local"),
 	//passportLocalMongoose =require("passport-local-mongoose"),
 	User				  =require("./models/user.js"),
-	campgroundRoute=require("./routes/campgrounds"),
-	commentRoute=require("./routes/comments"),
-	indexRoute=require("./routes/index"),
-	methodOverride   = require("method-override");
+	campgroundRoute		  =require("./routes/campgrounds"),
+	commentRoute		  =require("./routes/comments"),
+	indexRoute			  =require("./routes/index"),
+	methodOverride   	  = require("method-override");
 
 
 app.use(bodyParser.urlencoded({extended:true}));
